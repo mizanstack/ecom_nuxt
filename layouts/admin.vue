@@ -17,12 +17,16 @@
 	import HeaderAdmin from '~/components/admin/shared/HeaderAdmin';
 	import NavAdmin from '~/components/admin/shared/NavAdmin';
 	export default {
-		css : [
-			'@/static/admin/style.css',
-		],
 		components : {
 			'header-admin' : HeaderAdmin,
 			'nav-admin' : NavAdmin
+		},
+		head(){
+			return {
+				link : [
+					{ rel : 'stylesheet', href : '/admin/css/style.css'}
+				]
+			}
 		}
 	}
 </script>
